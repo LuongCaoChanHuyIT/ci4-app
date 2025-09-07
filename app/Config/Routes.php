@@ -5,4 +5,6 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+if (file_exists(APPPATH . 'Routes/UserRouter.php')) {
+    require APPPATH . 'Routes/UserRouter.php';
+}
